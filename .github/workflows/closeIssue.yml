@@ -1,7 +1,1 @@
-name Close Issue
 
-on:
-  repository_dispatch
-  
-jobs:
-  close-issue
