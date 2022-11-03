@@ -18,6 +18,6 @@ jobs:
         with:
           host: https://scdemo320.leankit.com
           apiToken: ${{secrets.SCDEMO320}}
-          boardId: ${{secrets.BOARDID
+          boardId: ${{secrets.BOARDID}}
           title: ${{github.event.issue.title}} \n (GH:${{github.event.issue.html_url}})
           typeId: ${{secrets.DEFECT_TYPE}}
