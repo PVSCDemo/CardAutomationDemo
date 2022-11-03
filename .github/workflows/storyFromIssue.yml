@@ -12,14 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: create defect
-        uses: leankit/github-actions/createCard@v1.1
-        with:
-          host: https://scdemo320.leankit.com
-          apiToken: ${{secrets.SCDEMO320}}
-          boardId: 1829950599
-          title: ${{github.event.client_payload.issue.title}}
-          typeId: 1829950603
       - name: Print github info
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
