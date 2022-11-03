@@ -20,3 +20,8 @@ jobs:
           boardId: 1829950599
           title: ${{github.event.client_payload.issue.title}}
           typeId: 1829950603
+      - name: Print github info
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
