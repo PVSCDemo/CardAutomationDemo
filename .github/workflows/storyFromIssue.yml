@@ -19,4 +19,6 @@ jobs:
           apiToken: ${{secrets.SCDEMO320}}
           boardId: 1829950599
           title: ${{github.event.issue.title}}
+          customId: ${{github.event.issue.id}}
+          externalLink: ${{github.event.issue.html_url}}
           typeId: 1829950603
