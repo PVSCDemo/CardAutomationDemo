@@ -2,8 +2,7 @@ name: Defect Creation in LK
 
 on:
   issues:
-    types:
-      - opened
+    types:[opened]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -18,5 +17,5 @@ jobs:
           host: https://scdemo320.leankit.com
           apiToken: ${{secrets.SCDEMO320}}
           boardId: 1829950599
-          title: New Defect
+          title: ${{github.event.client_payload.issue.title}}
           typeId: 1829950603
