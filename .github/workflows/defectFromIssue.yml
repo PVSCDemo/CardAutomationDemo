@@ -14,10 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: create defect
-        uses: leankit/github-actions/createCard@v1.1
+        uses: PVSCDemo/github-actions/createCard@v1.1
         with:
           host: ${{secrets.LEANKIT_URL}}
           apiToken: ${{secrets.LEANKIT_API}}
           boardId: ${{secrets.BOARD_ID}}
-          title: ${{github.event.issue.title}}   (GH:${{github.event.issue.html_url}})
+          title: ${{github.event.issue.title}}
+          customId: GitHub Issue #${{github.event.issue.number}}
+          externalLink: ${{github.event.issue.html_url}}
           typeId: ${{secrets.DEFECT_TYPE}}
