@@ -10,4 +10,3 @@ jobs:
         with:
           token: ${{secrets.GH_TOKEN}}
           repository: ${{github.env.repository}}
-          payload: ${{github.event}}
