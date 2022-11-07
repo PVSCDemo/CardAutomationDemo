@@ -7,9 +7,11 @@ jobs:
   create-defect:
     environment: Team Charlie
     runs-on: ubuntu-latest
+    outputs:
+      cardId: ${{steps.createdefect.outputs.createdCardId}}
     steps:
       - uses: actions/checkout@v3
-      - name: create defect
+      - id: createdefect
         uses: PVSCDemo/github-actions/createCard@v1.1.3
         with:
           host: ${{secrets.LEANKIT_URL}}
@@ -20,8 +22,8 @@ jobs:
           customId: ${{github.event.repository.name}} ${{github.event.issue.number}}
           externalLink: ${{github.event.issue.html_url}}
           typeId: ${{secrets.DEFECT_TYPE}}
-      - name: label issue
+      - id: labelissue
         uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
-          add-labels: Defect ${{env.createdCardId}}
+          add-labels: Defect ${{outputs.cardId}}
           repo-token: ${{ secrets.GH_TOKEN }}
