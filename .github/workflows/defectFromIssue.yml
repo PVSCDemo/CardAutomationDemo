@@ -7,8 +7,6 @@ jobs:
   create-defect:
     environment: Team Charlie
     runs-on: ubuntu-latest
-    outputs:
-      cardId: ${{steps.createdefect.outputs.createdCardId}}
     steps:
       - uses: actions/checkout@v3
       - id: createdefect
@@ -25,5 +23,5 @@ jobs:
       - id: labelissue
         uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
-          add-labels: Defect ${{steps.createdefect.createdCardId}}
+          add-labels: Defect ${{steps.createdefect.outputs.createdCardId}}
           repo-token: ${{ secrets.GH_TOKEN }}
