@@ -6,8 +6,9 @@ jobs:
     environment: Team Charlie
     runs-on: ubuntu-latest
     steps:
-      - uses: PVSCDemo/close-ap-issue@b93dbcc78119510de5cfff1b483a0580a3995963
+      - name: close-issue
+        uses: PVSCDemo/ap-actions/close-ap-issue@b93dbcc78119510de5cfff1b483a0580a3995963
         with:
           token: ${{secrets.GH_TOKEN}}
           repository: ${{github.env.repository}}
-          payload: bork
+          payload: ${{github.event.client_payload}}
