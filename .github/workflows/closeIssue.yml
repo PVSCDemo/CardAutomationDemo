@@ -1,3 +1,4 @@
+name: Close Issue on Defect Completion
 on:
   repository_dispatch
   
