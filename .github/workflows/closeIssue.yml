@@ -10,4 +10,4 @@ jobs:
         with:
           token: ${{secrets.GH_TOKEN}}
           repository: ${{github.env.repository}}
-          payload: ${{toJson(github.event.client_payload)}}
+          payload: bork
