@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: close-it
-        uses: PVSCDemo/close-ap-issue@caff743a569db4b8d9184df94231d14ce7a4c34b
+        uses: PVSCDemo/close-ap-issue@34a3e969a6a6bc4816e7ac721ff71b7294b2b9df
         with:
           token: ${{secrets.GH_TOKEN}}
           repository: ${{github.env.repository}}
