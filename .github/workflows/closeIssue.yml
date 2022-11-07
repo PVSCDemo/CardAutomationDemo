@@ -6,8 +6,7 @@ jobs:
     environment: Team Charlie
     runs-on: ubuntu-latest
     steps:
-      - name: close-it
-        uses: PVSCDemo/close-ap-issue@28e38cbca81d92211abb38b3b66115dd844c53b7
+      - uses: PVSCDemo/close-ap-issue@28e38cbca81d92211abb38b3b66115dd844c53b7
         with:
           token: ${{secrets.GH_TOKEN}}
           repository: ${{github.env.repository}}
