@@ -6,9 +6,9 @@ jobs:
     environment: Team Charlie
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: close-issue
-        uses: 
-          actions/checkout@v3
+        uses:
           PVSCDemo/ap-actions/close-ap-issue@b93dbcc78119510de5cfff1b483a0580a3995963
         with:
           token: ${{secrets.GH_TOKEN}}
