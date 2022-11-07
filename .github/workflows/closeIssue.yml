@@ -1,1 +1,11 @@
-
+on:
+  repository_dispatch
+  
+jobs:
+  close-agileplace-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: close-it
+        uses: PVSCDemo/close-ap-issue@83a16260ab02dcfa2800f193cad5ef92e3af406f
+        with:
+          payload: ${{github.event.client_payload}}
