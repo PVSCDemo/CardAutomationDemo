@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: close-it
-        uses: PVSCDemo/close-ap-issue@83a16260ab02dcfa2800f193cad5ef92e3af406f
+        uses: PVSCDemo/close-ap-issue@caff743a569db4b8d9184df94231d14ce7a4c34b
         with:
           payload: ${{github.event.client_payload}}
