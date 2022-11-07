@@ -20,3 +20,8 @@ jobs:
           customId: ${{github.event.repository.name}} ${{github.event.issue.number}}
           externalLink: ${{github.event.issue.html_url}}
           typeId: ${{secrets.DEFECT_TYPE}}
+      - name: label issue
+        uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
+        with:
+          add-labels: Defect@${{env.createdCardId}}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
