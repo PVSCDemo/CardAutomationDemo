@@ -3,9 +3,12 @@ on:
   
 jobs:
   close-agileplace-issue:
+    environment: Team Charlie
     runs-on: ubuntu-latest
     steps:
       - name: close-it
         uses: PVSCDemo/close-ap-issue@caff743a569db4b8d9184df94231d14ce7a4c34b
         with:
+          token: ${{secrets.GH_TOKEN}}
+          repository: ${{github.env.repository}}
           payload: ${{github.event.client_payload}}
