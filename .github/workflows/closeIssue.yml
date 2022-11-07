@@ -1,7 +1,6 @@
 name: Close Issue on Defect Completion
 on:
   repository_dispatch
-  
 jobs:
   close-agileplace-issue:
     environment: Team Charlie
@@ -12,4 +11,4 @@ jobs:
         with:
           token: ${{secrets.GH_TOKEN}}
           repository: ${{github.env.repository}}
-          ap_payload: ${{github.event.client_payload}}
+          payload: ${{github.event.client_payload}}
