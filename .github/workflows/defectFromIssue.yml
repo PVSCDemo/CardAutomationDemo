@@ -15,6 +15,7 @@ jobs:
           host: ${{secrets.LEANKIT_URL}}
           apiToken: ${{secrets.LEANKIT_API}}
           boardId: ${{secrets.BOARD_ID}}
+          laneId: ${{secrets.LANE_ID}}
           title: ${{github.event.issue.title}}
           customId: ${{github.event.repository.name}} ${{github.event.issue.number}}
           externalLink: ${{github.event.issue.html_url}}
