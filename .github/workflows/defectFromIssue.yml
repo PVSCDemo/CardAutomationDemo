@@ -31,4 +31,4 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             Agile Place Defect Created
-            "https\://${{secrets.LEANKIT_URL}}/card/${{steps.createdefect.outputs.createdCardId}}"
+            ${{secrets.LEANKIT_URL}}/card/${{steps.createdefect.outputs.createdCardId}}
