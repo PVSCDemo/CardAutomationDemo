@@ -15,7 +15,7 @@ jobs:
         uses:
           PVSCDemo/ap-actions/close-ap-issue@e291c9d1942499f295bb0e3c606047a76ed70366
         with:
-          token:  ${{github.repository}}
+          token:  ${{secrets.GH_TOKEN}}
           repository: ${{github.repository}}
-          data: ${{github.repository}}
+          data: ${{github}}
           
