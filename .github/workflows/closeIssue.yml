@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: close-issue
-        run: echo "${{toJSON(github.event)}}" >> $GITHUB_OUTPUT
+        run: echo "${{toJSON(github.event)}}"
         
       - name: other-stuff
         uses:
