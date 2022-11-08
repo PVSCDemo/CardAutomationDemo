@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: close-issue
+        env: 
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
         if: github.event.action == 'close-ap-issue'
         uses:
           PVSCDemo/ap-actions/close-ap-issue@main
-        with:
-          token:  ${{toJSON(secrets.GH_TOKEN)}}
