@@ -16,5 +16,5 @@ jobs:
           PVSCDemo/ap-actions/close-ap-issue@c42fc99d59a0f7e137f017a7e2363bd75179e174
         with:
           token: a token
-          repository: the repo
-          payload: ${{ github.event.client_payload}}
+          repository: ${{github.repository}}
+          payload: stuff
