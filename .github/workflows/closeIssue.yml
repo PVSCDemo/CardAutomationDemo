@@ -10,6 +10,6 @@ jobs:
       - name: close-issue
         if: github.event.action == 'close-ap-issue'
         uses:
-          PVSCDemo/ap-actions/close-ap-issue@a26f0360d5477719a75a42c20d8b61379aa3c1fe
+          PVSCDemo/ap-actions/close-ap-issue@4bb190f41199b73d09790d126ed0ab08eb9eaaf1
         with:
           token:  ${{secrets.GH_TOKEN}}
