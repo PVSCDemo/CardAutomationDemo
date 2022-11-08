@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: close-issue-check
-        if: github.event.action != "close-ap-issue"
+        if: github.event.action != 'close-ap-issue'
         run: echo "${{toJSON(github.event)}}"
         
       - name: close-issue
