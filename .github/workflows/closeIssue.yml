@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: close-issue
         env: 
-          GH_TOKEN: ${{toJSON(secrets.GH_TOKEN)}}
+          GH_TOKEN: mytoken
         if: github.event.action == 'close-ap-issue'
         uses:
           PVSCDemo/ap-actions/close-ap-issue@main
