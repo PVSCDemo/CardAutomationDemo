@@ -17,5 +17,5 @@ jobs:
         with:
           token: a token
           repository: ${{github.repository}}
-          data: stuff
+          data: ${{github.event.client_payload}}
           
