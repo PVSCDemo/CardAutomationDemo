@@ -17,4 +17,4 @@ jobs:
         with:
           token: a token
           repository: the repo
-          payload: stuff
+          payload: ${{ github.event.client_payload}}
