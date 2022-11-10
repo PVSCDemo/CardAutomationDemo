@@ -23,7 +23,7 @@ jobs:
       - id: labelissue
         uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
-          add-labels: Defect ${{steps.createdefect.outputs.createdCardId}}
+          add-labels: "AP Defect, ${{steps.createdefect.outputs.createdCardId}}"
           repo-token: ${{ secrets.GH_TOKEN }}
       - id: commentissue
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
